@@ -8,10 +8,15 @@
     <style>
         body {
             margin: 0; background: #000; color: #fff;
-            font-family: 'Arial', sans-serif; overflow: hidden;
-            display: flex; justify-content: center; align-items: center; height: 100vh;
+            font-family: 'Arial', sans-serif; overflow-x: hidden;
+            display: flex; flex-direction: column; align-items: center; min-height: 100vh;
         }
-        /* Animated Background */
+        /* विज्ञापन के लिए साफ और व्यवस्थित बॉक्स */
+        .ad-wrapper {
+            width: 100%; max-width: 350px; min-height: 120px;
+            margin: 10px 0; background: rgba(255,255,255,0.05);
+            border-radius: 10px; display: flex; justify-content: center; overflow: hidden;
+        }
         .bg-animate {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background: linear-gradient(120deg, #ff0055, #7000ff, #00ccff, #ffcc00);
@@ -20,61 +25,69 @@
         @keyframes gradientBG { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
 
         .main-box {
-            background: rgba(0, 0, 0, 0.7); padding: 30px;
+            background: rgba(0, 0, 0, 0.85); padding: 25px;
             border-radius: 20px; border: 3px solid #ffcc00;
-            box-shadow: 0 0 20px #ffcc00; text-align: center; width: 85%;
+            box-shadow: 0 0 25px rgba(255, 204, 0, 0.5);
+            text-align: center; width: 88%; max-width: 400px; margin: 15px 0;
         }
-        h1 { font-size: 2.2rem; text-shadow: 2px 2px #ff0000; margin: 10px 0; }
-        .name-tag { color: #00ffcc; font-size: 1.5rem; font-weight: bold; }
-        input { padding: 12px; border-radius: 10px; border: none; width: 80%; margin: 15px 0; font-size: 1rem; }
-        .btn-magic { background: #ffcc00; color: #000; padding: 12px 25px; border-radius: 50px; font-weight: bold; border: none; cursor: pointer; }
-        .btn-wa { background: #25D366; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; display: inline-block; margin-top: 20px; }
+        h1 { font-size: 1.8rem; text-shadow: 2px 2px #ff0000; margin: 10px 0; }
+        .name-tag { color: #00ffcc; font-size: 2.2rem; font-weight: bold; margin: 10px 0; }
+        input { padding: 15px; border-radius: 30px; border: none; width: 85%; margin: 15px 0; font-size: 1.1rem; text-align: center; box-shadow: inset 0 0 10px rgba(0,0,0,0.5); }
+        .btn-magic { background: #ffcc00; color: #000; padding: 12px 30px; border-radius: 50px; font-weight: bold; border: none; cursor: pointer; font-size: 1.2rem; box-shadow: 0 4px 15px rgba(255, 204, 0, 0.4); }
+        .btn-wa { background: #25D366; color: white; padding: 15px 35px; border-radius: 50px; text-decoration: none; display: inline-block; margin-top: 20px; font-weight: bold; font-size: 1.2rem; box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4); }
     </style>
 </head>
 <body>
 
-    <script async="async" data-cfasync="false" src="https://pl28817016.effectivegatecpm.com/dc1a62b76cf4061cfc9a39be9458547e/invoke.js"></script>
-<div id="container-dc1a62b76cf4061cfc9a39be9458547e"></div>
     <div class="bg-animate"></div>
+
+    <div class="ad-wrapper">
+        <script async="async" data-cfasync="false" src="https://pl28817016.effectivegatecpm.com/dc1a62_बदलाव_dc1a62b76cf4061cfc9a39be9458547e/invoke.js"></script>
+        <div id="container-dc1a62b76cf4061cfc9a39be9458547e"></div>
+    </div>
 
     <div class="main-box">
         <div id="step1">
             <h1>🔥 होलिका दहन और <br> 🎨 होली की बधाई</h1>
-            <input type="text" id="userInput" placeholder="यहाँ अपना नाम लिखें...">
+            <p style="margin-bottom:0;">अपना शुभ नाम यहाँ लिखें</p>
+            <input type="text" id="userInput" placeholder="जैसे: सुग्रीव राय">
             <br>
             <button class="btn-magic" onclick="startMagic()">जादू देखें ✨</button>
         </div>
 
         <div id="step2" style="display:none;">
             <p class="name-tag" id="showName"></p>
-            <p>की तरफ से आपको</p>
-            <h1 style="color: #ffcc00;">होलिका दहन की अग्नि में आपकी सारी परेशानियाँ जल जाएँ...</h1>
-            <h1 style="color: #ff00ff;">और होली के रंग आपके जीवन को खुशियों से भर दें!</h1>
-            <a id="waLink" class="btn-wa" href="#">WhatsApp पर सबको भेजें ➔</a>
+            <p style="font-size: 1.1rem; margin: 5px 0;">की तरफ से आपको सपरिवार</p>
+            <h1 style="color: #ffcc00; font-size: 1.6rem;">होलिका दहन और होली की <br> हार्दिक शुभकामनाएँ!</h1>
+            <a id="waLink" class="btn-wa" href="#">WhatsApp पर भेजें ➔</a>
         </div>
     </div>
+
+    <div class="ad-wrapper">
+        </div>
 
 <script>
     function startMagic() {
         var name = document.getElementById("userInput").value;
-        if(name == "") { alert("कृपया नाम लिखें!"); return; }
+        if(name.trim() == "") { alert("कृपया अपना नाम लिखें!"); return; }
         
         document.getElementById("step1").style.display = "none";
         document.getElementById("step2").style.display = "block";
         document.getElementById("showName").innerText = "✨ " + name + " ✨";
 
-        // धमाका - रंगों की बारिश
-        var end = Date.now() + (10 * 1000);
-        var colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff'];
+        // रंगों की शानदार बारिश (Celebration Confetti)
+        var end = Date.now() + (6 * 1000);
+        var colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
 
         (function frame() {
-            confetti({ particleCount: 7, angle: 60, spread: 55, origin: { x: 0 }, colors: colors });
-            confetti({ particleCount: 7, angle: 120, spread: 55, origin: { x: 1 }, colors: colors });
+            confetti({ particleCount: 6, angle: 60, spread: 55, origin: { x: 0 }, colors: colors });
+            confetti({ particleCount: 6, angle: 120, spread: 55, origin: { x: 1 }, colors: colors });
             if (Date.now() < end) { requestAnimationFrame(frame); }
         }());
 
         // WhatsApp Link Setup
-        var msg = window.encodeURIComponent("*"+name+"* ने आपके लिए एक खास सरप्राइज भेजा है! 🎨🔥 इसे अभी देखें 👇\n" + window.location.href);
+        var currentUrl = window.location.href;
+        var msg = window.encodeURIComponent("*"+name+"* ने आपके लिए एक बहुत प्यारा होली सरप्राइज भेजा है! 🎨🔥 इसे अभी यहाँ क्लिक करके देखें 👇\n" + currentUrl);
         document.getElementById("waLink").href = "https://wa.me/?text=" + msg;
     }
 </script>
